@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 3px;
+    display: block;
+  }
+
+  form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  input, select, textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+  

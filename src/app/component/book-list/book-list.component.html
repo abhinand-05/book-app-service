@@ -1,0 +1,26 @@
+<div style=" display: flex;">
+<input [(ngModel)]="searchTerm" placeholder="Search by title" />
+<button (click)="search()">🔍</button>
+<div style="padding-left: 10px;">
+<select [(ngModel)]="genreFilter" (change)="filterBooks()" >
+  <option value="">Search by Genres</option>
+  <option value="Fiction">Fiction</option>
+  <option value="Non-Fiction">Non-Fiction</option>
+  <option value="Sci-Fi">Sci-Fi</option>
+  <option value="Mystery">Mystery</option>
+  <option value="Romance">Romance</option>
+  <option value="Philosophy">Philosophy</option>
+  <option value="Fantasy">Fantasy</option>
+  <option value="Thriller">Thriller</option>
+ 
+</select>
+</div>
+</div>
+<h2>Book List</h2>
+<p *ngIf="books.length === 0">No book by this name.</p>
+<ul *ngIf="books.length > 0">
+  <li *ngFor="let book of books">
+    <a [routerLink]="['/book', book.id]">{{ book.title ?? 'Untitled Book' }}</a>
+  </li>
+</ul>
+
